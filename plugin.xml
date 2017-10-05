@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.application.launchplugin"
+        version="0.0.1">
+
+  <name>LaunchApp</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/LaunchApp.js" target="js/LaunchApp.js"/>
+
+  <js-module src="www/LaunchApp.js" name="LaunchApp">
+    <clobbers target="LaunchApp" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="LaunchApp">
+        <param name="android-package" value="com.application.launchplugin.LaunchApp"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/LaunchApp.java" target-dir="src/com/application/launchplugin/"/>
+  </platform>
+
+  <platform name="ios">
+    
+    <config-file target="config.xml" parent="/widget">
+      <feature name="LaunchApp">
+        <param name="ios-package" value="com.application.launchplugin" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/LaunchApp.h" target-dir="LaunchAppPlugin"/>
+    <source-file src="src/ios/LaunchApp.m" target-dir="LaunchAppPlugin"/>
+  </platform>
+
+  <platform name="wp7">
+    <source-file src="src/wp7/LaunchApp.cs"/>
+  </platform>
+
+</plugin>
