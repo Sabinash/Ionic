@@ -27,7 +27,7 @@ Edit `www/js/index.js` and add the following code inside `onDeviceReady`
         alert("Error calling LaunchApp Plugin");
     }
 
-    LaunchApp.open("World", success, failure);
+    LaunchApp.open("Hello","World", success, failure);
 ```
 
 Install iOS or Android platform
