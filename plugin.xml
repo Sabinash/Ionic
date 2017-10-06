@@ -30,7 +30,7 @@
     
     <config-file target="config.xml" parent="/widget">
       <feature name="LaunchApp">
-        <param name="ios-package" value="com.application.launchplugin" />
+        <param name="ios-package" value="LaunchApp" />
       </feature>
     </config-file>
 
