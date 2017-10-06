@@ -2,6 +2,6 @@
 
 module.exports = {
     openApp: function (userName, password, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "LaunchApp", "openApp", [name]);
+        cordova.exec(successCallback, errorCallback, "LaunchApp", "openApp", [userName,password]);
     }
 };
